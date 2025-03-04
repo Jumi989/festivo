@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Festivo</title>
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
       rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Festivo</title>
   </head>
   <body>
     <!-- Navbar -->
-    <div class="navbar bg-base-100 shadow-sm">
+    <div class="navbar shadow-sm fixed top-0 text-white border-b">
       <div class="navbar-start">
         <div class="dropdown">
           <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -72,28 +72,81 @@
         </div>
       </div>
     </div>
+
+    
     <div class="overview">
-      <h3>Come and select your events with us</h3>
+      <h3 class="text-center text-xl font-bold mt-10">
+        Come and select your events with us
+      </h3>
       <p>2</p>
     </div>
 
     <!-- Event Categories -->
-    <div class="container py-5">
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="category" id="wedding">💍</div>
+    <div class="container mx-auto grid grid-cols-3 gap-4">
+      <div class="card bg-base-100 image-full w-96 shadow-xl">
+        <figure>
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            alt="Shoes"
+          />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Wedding</h2>
         </div>
-        <div class="col-md-4">
-          <div class="category" id="anniversary">a</div>
+      </div>
+      <div class="card bg-base-100 image-full w-96 shadow-xl">
+        <figure>
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            alt="Shoes"
+          />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Wedding</h2>
         </div>
-        <div class="col-md-4">
-          <div class="category" id="birthday">🎂</div>
+      </div>
+      <div class="card bg-base-100 image-full w-96 shadow-xl">
+        <figure>
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            alt="Shoes"
+          />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Wedding</h2>
         </div>
-        <div class="col-md-4">
-          <div class="category" id="other">🎭 Other Events</div>
+      </div>
+      <div class="card bg-base-100 image-full w-96 shadow-xl">
+        <figure>
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            alt="Shoes"
+          />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Wedding</h2>
         </div>
-        <div class="col-md-4">
-          <div class="category" id="custom">✏️ Custom Events</div>
+      </div>
+      <div class="card bg-base-100 image-full w-96 shadow-xl">
+        <figure>
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            alt="Shoes"
+          />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Wedding</h2>
+        </div>
+      </div>
+      <div class="card bg-base-100 image-full w-96 shadow-xl">
+        <figure>
+          <img
+            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+            alt="Shoes"
+          />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Wedding</h2>
         </div>
       </div>
     </div>
