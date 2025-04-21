@@ -1,3 +1,18 @@
+<?php
+
+session_start();
+$error =[
+  'register' =>$_SESSION['register_error'] ?? ''
+];
+$activeForm =  $_SESSION['active_form'] ?? 'login';
+session_unset();
+function showError($error) {  
+  return !empty($error) ?"<p class ='error_message'>$error</p>" : '';
+}
+function isActiveForm($forName, $activeForm){
+  return   $forName === $activeForm ? 'active' : '';
+}
+?>
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
   <head>
@@ -5,6 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
+
       rel="stylesheet"
       type="text/css"
     />
@@ -13,7 +29,7 @@
   </head>
   <body>
     <!-- Navbar -->
-     <header class="fixed top-0 z-50 w-full border-b">
+    <header class="fixed top-0 z-50 w-full border-b">
     
     
     <div class="navbar text-white">
@@ -63,28 +79,42 @@
       </div>
       
       <div class="navbar-end">
-        <a class="btn btn-ghost text-lg">Login</a>
-        <a href="signup.html" class="btn btn-ghost text-lg">Signup</a>
+        <a href="login.php" class="btn btn-ghost text-lg">Login</a>
+        <a href="register.php" class="btn btn-ghost text-lg">Signup</a>
 
         
       </div>
     </div>
   </header>
     <!-- Hero Section -->
-    <div class="hero min-h-screen" style="background-image: url(./3.jpg)">
+    <div class="hero min-h-screen" style="background-image: url(./pics/3.jpg)">
       <div class="hero-overlay"></div>
       <div class="hero-content text-neutral-content text-center">
-        <div class="card backdrop-blur-sm bg-purple-950/30 w-95 h-110 rounded-md">
-            <div class="card-body justify-center items-center">
-                <h3 class="text-xl mb-5">Login</h3>
+        <div class="card backdrop-blur-sm bg-purple-950/30 w-95 h-135 rounded-md">
+         <div <?= isActiveForm('register',$activeForm); ?> >
+            <form action="login_register.php" method="post" class="card-body justify-center items-center">
+                <h3 class="text-xl ">Register</h3>
               <fieldset class="fieldset w-80">
-                <label class="fieldset-label text-lg mb-1">Email</label>
-                <input type="email" class="input mb-5" placeholder="Email" />
-                <label class="fieldset-label text-lg mb-1">Password</label>
-                <input type="password" class="input mb-5" placeholder="Password" />
-                <div><a class="link link-hover text-base">Forgot password?</a></div>
-                <button class="btn btn-neutral mt-4">Login</button>
+              <?= showError($error['register']); ?>
+                <label class="fieldset-label text-base ">Name</label>
+                <input type="Name" class="input" name="name" placeholder="Name" />
+                <label class="fieldset-label text-base" >Email</label>
+                <input type="email" class="input" name="email" placeholder="Email" />
+                <label class="fieldset-label text-base ">Password</label>
+                <input type="password" class="input " placeholder="Password" />
+                <label class="fieldset-label text-base ">Confirm Password</label>
+                <input type="Confirm Password" class="input" name="password" placeholder="Confirm Password" />
+                <label class="fieldset-label text-base ">Role</label>
+                <select name="role" class="select">
+                        <option disabled selected value="" >Select Role</option>
+                        <option value="user">user</option>
+                        <option value="admin">admin</option>
+                        
+                </select>
+                
+                <button class="btn btn-neutral mt-4" name="register" >Register</button>
               </fieldset>
+            </form>
             </div>
           </div>
             

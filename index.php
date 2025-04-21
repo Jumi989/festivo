@@ -54,7 +54,7 @@
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1 text-lg">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li><a>Services</a></li>
           <li><a>Contact</a></li>
           <li><a>About</a></li>
@@ -63,15 +63,15 @@
       </div>
       
       <div class="navbar-end">
-        <a href="login.html" class="btn btn-ghost text-lg">Login</a>
-        <a href="signup.html" class="btn btn-ghost text-lg">Signup</a>
+        <a href="login.php" class="btn btn-ghost text-lg">Login</a>
+        <a href="register.php" class="btn btn-ghost text-lg">Signup</a>
 
         
       </div>
     </div>
   </header>
     <!-- Hero Section -->
-    <div class="hero min-h-screen" style="background-image: url(./3.jpg)">
+    <div class="hero min-h-screen" style="background-image: url(./pics/3.jpg)">
       <div class="hero-overlay"></div>
       <div class="hero-content text-neutral-content text-center">
         <div class="max-w-md">
@@ -92,10 +92,10 @@
 
     <!-- Event Categories -->
     <div class="container mx-auto grid grid-cols-3 gap-4">
-      <a href="./shadi.html" class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition"> 
+      <a href="./shadi.php" class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition"> 
         <figure>
           <img
-            src="wedding.webp"
+            src="./pics/wedding.webp"
             alt="Shoes" />
         </figure>
         <div class="card-body items-center">
@@ -105,7 +105,7 @@
       <div class="card bg-base-100  w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
         <figure>
           <img
-            src="./anniversary.jpg"
+            src="./pics/anniversary.jpg"
             alt="Shoes" />
         </figure>
         <div class="card-body items-center">
@@ -116,7 +116,7 @@
       <div class="card bg-base-100  w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
         <figure>
           <img
-            src="./birthday.jpg"
+            src="./pics/birthday.jpg"
             alt="Shoes" />
         </figure>
         <div class="card-body items-center">
@@ -127,7 +127,7 @@
       <div class="card bg-base-100  w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
         <figure>
           <img
-            src="./other.jpg"
+            src="./pics/other.jpg"
             alt="Shoes" />
         </figure>
         <div class="card-body items-center">
@@ -138,7 +138,7 @@
       <div class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
         <figure class="h-[256px]">
           <img
-            src="./custom.jpg"
+            src="./pics/custom.jpg"
             alt="Shoes" />
         </figure>
         <div class="card-body items-center">
@@ -148,7 +148,7 @@
       <div class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
         <figure class="h-[256px]">
           <img
-            src="./custom.jpg"
+            src="./pics/custom.jpg"
             alt="Shoes" />
         </figure>
         <div class="card-body items-center">

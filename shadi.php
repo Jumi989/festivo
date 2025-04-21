@@ -89,7 +89,7 @@
             
             <!-- Package Card -->
             <div class="bg-white shadow-md rounded-lg p-4">
-                <img src="./pack2.jpeg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                <img src="./pics/pack2.jpeg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
                 <h2 class="text-lg font-bold mt-2">Elegant Wedding</h2>
                 <div class="flex items-center my-2">
                     ⭐⭐⭐⭐⭐
@@ -118,7 +118,7 @@
             </div>
 
             <div class="bg-white shadow-md rounded-lg p-4">
-                <img src="./destination.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                <img src="./pics/destination.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
                 <h2 class="text-lg font-bold mt-2">Destination Wedding</h2>
                 <div class="flex items-center my-2">
                     ⭐⭐⭐⭐⭐
@@ -133,7 +133,7 @@
                 </div>
 
                 <div class="bg-white shadow-md rounded-lg p-4">
-                    <img src="./home wed.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                    <img src="./pics/home wed.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
                     <h2 class="text-lg font-bold mt-2">Home Wedding</h2>
                     <div class="flex items-center my-2">
                         ⭐⭐⭐⭐⭐
@@ -148,7 +148,7 @@
                     </div>
 
                     <div class="bg-white shadow-md rounded-lg p-4">
-                        <img src="./simple.jpeg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                        <img src="./pics/simple.jpeg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
                         <h2 class="text-lg font-bold mt-2">Simple Wedding</h2>
                         <div class="flex items-center my-2">
                             ⭐⭐⭐⭐⭐
@@ -163,7 +163,7 @@
                         </div>
 
                         <div class="bg-white shadow-md rounded-lg p-4">
-                            <img src="./pack3.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                            <img src="./pics/pack3.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
                             <h2 class="text-lg font-bold mt-2">Holud Ceremony</h2>
                             <div class="flex items-center my-2">
                                 ⭐⭐⭐⭐⭐
@@ -178,7 +178,7 @@
                             </div>
 
                             <div class="bg-white shadow-md rounded-lg p-4">
-                                <img src="./sangeet.jpeg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                                <img src="./pics/sangeet.jpeg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
                                 <h2 class="text-lg font-bold mt-2">Sangeet</h2>
                                 <div class="flex items-center my-2">
                                     ⭐⭐⭐⭐⭐
@@ -193,7 +193,7 @@
                                 </div>
 
                                 <div class="bg-white shadow-md rounded-lg p-4">
-                                    <img src="./pack4.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                                    <img src="./pics/pack4.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
                                     <h2 class="text-lg font-bold mt-2">Simple Holud</h2>
                                     <div class="flex items-center my-2">
                                         ⭐⭐⭐⭐⭐
@@ -208,7 +208,7 @@
                                     </div>
 
                                     <div class="bg-white shadow-md rounded-lg p-4">
-                                        <img src="./pack7.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                                        <img src="./pics/pack7.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
                                         <h2 class="text-lg font-bold mt-2">Engagement party</h2>
                                         <div class="flex items-center my-2">
                                             ⭐⭐⭐⭐⭐
@@ -223,7 +223,7 @@
                                     </div>
 
                                     <div class="bg-white shadow-md rounded-lg p-4">
-                                            <img src="./mehedi.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                                            <img src="./pics/mehedi.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
                                             <h2 class="text-lg font-bold mt-2">Mehedi Night</h2>
                                             <div class="flex items-center my-2">
                                                 ⭐⭐⭐⭐⭐
@@ -238,7 +238,7 @@
                                     </div>
 
                                             <div class="bg-white shadow-md rounded-lg p-4">
-                                                <img src="./walima.jpeg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                                                <img src="./pics/walima.jpeg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
                                                 <h2 class="text-lg font-bold mt-2">Walima</h2>
                                                 <div class="flex items-center my-2">
                                                     ⭐⭐⭐⭐⭐
@@ -253,7 +253,7 @@
                                                 </div>
 
                                                 <div class="bg-white shadow-md rounded-lg p-4">
-                                                    <img src="./simple_wali.jpeg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                                                    <img src="./pics/simple_wali.jpeg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
                                                     <h2 class="text-lg font-bold mt-2">Simple Walima</h2>
                                                     <div class="flex items-center my-2">
                                                         ⭐⭐⭐⭐⭐
@@ -268,7 +268,7 @@
                                                     </div>
 
                                                     <div class="bg-white shadow-md rounded-lg p-4">
-                                                        <img src="./reception.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                                                        <img src="./pics/reception.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
                                                         <h2 class="text-lg font-bold mt-2">Reception</h2>
                                                         <div class="flex items-center my-2">
                                                             ⭐⭐⭐⭐⭐
