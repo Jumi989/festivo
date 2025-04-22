@@ -32,6 +32,7 @@ if (isset($_POST['login'])) {
     if(password_verify( $password, $user["password"])) {
     $_SESSION["name"] =$user['name'];
     $_SESSION['email'] =$user['email'];
+    $_SESSION['user_id'] =$user['id'];
 
     if($user['role']=== 'admin') {
         header("Location: index.php");

@@ -99,7 +99,7 @@ function isActiveForm($forName, $activeForm){
                 <label class="fieldset-label text-base ">Name</label>
                 <input type="Name" class="input" name="name" placeholder="Name" />
                 <label class="fieldset-label text-base" >Email</label>
-                <input type="email" class="input" name="email" placeholder="Email" />
+                <input type="email" class="input" name="email"  placeholder="Email" />
                 <label class="fieldset-label text-base ">Password</label>
                 <input type="password" class="input " placeholder="Password" />
                 <label class="fieldset-label text-base ">Confirm Password</label>

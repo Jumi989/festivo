@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Festivo</title>
   </head>
-  <body>
+   <body>
     <!-- Navbar -->
      <header class="fixed top-0 z-50 w-full border-b">
     
@@ -69,94 +69,48 @@
         
       </div>
     </div>
-   </header>
-    <!-- Hero Section -->
-    <div class="hero min-h-screen" style="background-image: url(./pics/3.jpg)">
+    </header>
+    <div class="hero min-h-screen" style="background-image: url(./pics/form.jpg)">
       <div class="hero-overlay"></div>
       <div class="hero-content text-neutral-content text-center">
-        <div class="max-w-md">
-          <h1 class="mt-30  text-3xl font-serif">Plan Your Perfect Event</h1>
-          <p class="mt-4">Weddings, Anniversaries, Birthdays & More</p>
-          <button class="btn btn-primary mt-2">Get Started</button>
-        </div>
+        <div class="card backdrop-blur- bg-white/15 w-[900px] h-122 rounded-md">
+        
+            <form action="book_form.php" method="post" class="card-body justify-center items-center ">
+                <h2 class="text-2xl ">Book Your Events!</h2>
+              <fieldset class="fieldset w-[800px] gap-6 grid grid-cols-2">
+                <div>
+                  <label class="fieldset-label text-base ">Name</label>
+                  <input type="Name" class="input w-full" name="name" placeholder="enter your name" />
+                  <label class="fieldset-label text-base ">Email:</label>
+                  <input type="email" class="input w-full" name="email" placeholder="enter your email" />
+                  <label class="fieldset-label text-base" >Phone</label>
+                  <input type="text" class="input w-full" name="phone" placeholder="Enter your number" />
+                  <label class="fieldset-label text-base" >Address</label>
+                  <input type="text" class="input w-full" name="address" placeholder="Enter your address" />
+                  </div>
+               
+                   
+                <div>
+                  <label class="fieldset-label text-base ">Location</label>
+                  <input type="text" class="input w-full " name="location" placeholder="Venue" />
+                  <label class="fieldset-label text-base ">How Many:</label>
+                  <input type="text" class="input w-full " name="guests" placeholder="number of guests" />
+                  <label class="fieldset-label text-base ">Arrivals</label>
+                   <input type="date" class="input w-full" name="arrivals" placeholder="Arrivals" />
+                  <label class="fieldset-label text-base ">Leaving</label>
+                   <input type="date" class="input w-full" name="leaving" placeholder="Leaving" />
+                 </div>
+                
+                
+              </fieldset>
+              <button type="submit" class="btn btn-neutral mt-4  w-77"  name="send" >Submit</button>
+            </form>
+            
+          </div>
+            
+           
       </div>
     </div>
-
-    
-    <div class="overview">
-      <h3 class="text-center text-xl font-bold mt-6 mb-10">
-        Come and select your events with us
-      </h3>
-      <!-- <p class= "text-center mt-5">2</p> -->
-    </div>
-
-    <!-- Event Categories -->
-    <div class="container mx-auto grid grid-cols-3 gap-4">
-      <a href="./shadi.php" class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition"> 
-        <figure>
-          <img
-            src="./pics/wedding.webp"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body items-center">
-          <h2 class="card-title">Wedding</h2>
-        </div>
-      </a>
-      <div class="card bg-base-100  w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
-        <figure>
-          <img
-            src="./pics/anniversary.jpg"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body items-center">
-          <h2 class="card-title">Anniversary</h2>
-         
-        </div>
-      </div>
-      <div class="card bg-base-100  w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
-        <figure>
-          <img
-            src="./pics/birthday.jpg"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body items-center">
-          <h2 class="card-title">Birthday</h2>
-         
-        </div>
-      </div>
-      <div class="card bg-base-100  w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
-        <figure>
-          <img
-            src="./pics/other.jpg"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body items-center">
-          <h2 class="card-title">Other Events</h2>
-         
-        </div>
-      </div>
-      <div class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
-        <figure class="h-[256px]">
-          <img
-            src="./pics/custom.jpg"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body items-center">
-          <h2 class="card-title">Customize</h2>
-        </div>
-      </div>
-      <div class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
-        <figure class="h-[256px]">
-          <img
-            src="./pics/custom.jpg"
-            alt="Shoes" />
-        </figure>
-        <div class="card-body items-center">
-          <h2 class="card-title">Customize</h2>
-        </div>
-      </div>
-    </div>
-
     <footer class=" pl-80 footer sm:footer-horizontal bg-base-300 text-base-content p-10">
   <nav>
     <h6 class="footer-title">Services</h6>
@@ -211,8 +165,5 @@
     </div>
   </nav>
 </footer>
-   <script src="script.js"></script>
-
-    
-  </body>
+    </body>
 </html>
