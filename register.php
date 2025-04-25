@@ -70,7 +70,7 @@ function isActiveForm($forName, $activeForm){
       </div>
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1 text-lg">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.php">Home</a></li>
           <li><a>Services</a></li>
           <li><a>Contact</a></li>
           <li><a>About</a></li>

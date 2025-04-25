@@ -55,8 +55,8 @@
             </div>
 
             <div class="navbar-end">
-                <a href="login.html" class="btn btn-ghost text-lg">Login</a>
-                <a href="signup.html" class="btn btn-ghost text-lg">Signup</a>
+                <a href="login.php" class="btn btn-ghost text-lg">Login</a>
+                <a href="signup.php" class="btn btn-ghost text-lg">Signup</a>
 
 
             </div>
