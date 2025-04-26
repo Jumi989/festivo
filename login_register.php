@@ -18,7 +18,7 @@ else {
 
     $conn->query("INSERT INTO users(name,email,password,role)VALUES('$name','$email','$password','$role')");
 }
-header("Location: register.php");
+header("Location: login.php");
 exit();
 }
 

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 
@@ -47,12 +48,29 @@
         </ul>
       </div>
 
+
+
       <div class="navbar-end">
+
+        <div class="flex-none">
+          <ul class="menu menu-horizontal px-1">
+            <li>
+              <details>
+                <summary>Profile</summary>
+                <ul class="bg-base-100 rounded-t-none p-2">
+                  <li><a>Admin</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </div>
         <a href="login.php" class="btn btn-ghost text-lg">Login</a>
         <a href="register.php" class="btn btn-ghost text-lg">Signup</a>
 
 
       </div>
+
+
     </div>
   </header>
   <!-- Hero Section -->
@@ -85,7 +103,8 @@
         <h2 class="card-title">Wedding</h2>
       </div>
     </a>
-    <a href="./anniversary.php" class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
+    <a href="./anniversary.php"
+      class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
       <img src="./pics/anniversary.jpg" alt="Shoes" />
       </figure>
       <div class="card-body items-center">
@@ -93,41 +112,41 @@
 
       </div>
     </a>
-  
-  <div class="card bg-base-100  w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
-    <figure>
-      <img src="./pics/birthday.jpg" alt="Shoes" />
-    </figure>
-    <div class="card-body items-center">
-      <h2 class="card-title">Birthday</h2>
 
-    </div>
-  </div>
-  <div class="card bg-base-100  w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
-    <figure>
-      <img src="./pics/other.jpg" alt="Shoes" />
-    </figure>
-    <div class="card-body items-center">
-      <h2 class="card-title">Other Events</h2>
+    <div class="card bg-base-100  w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
+      <figure>
+        <img src="./pics/birthday.jpg" alt="Shoes" />
+      </figure>
+      <div class="card-body items-center">
+        <h2 class="card-title">Birthday</h2>
 
+      </div>
     </div>
-  </div>
-  <div class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
-    <figure class="h-[256px]">
-      <img src="./pics/custom.jpg" alt="Shoes" />
-    </figure>
-    <div class="card-body items-center">
-      <h2 class="card-title">Customize</h2>
+    <div class="card bg-base-100  w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
+      <figure>
+        <img src="./pics/other.jpg" alt="Shoes" />
+      </figure>
+      <div class="card-body items-center">
+        <h2 class="card-title">Other Events</h2>
+
+      </div>
     </div>
-  </div>
-  <div class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
-    <figure class="h-[256px]">
-      <img src="./pics/custom.jpg" alt="Shoes" />
-    </figure>
-    <div class="card-body items-center">
-      <h2 class="card-title">Customize</h2>
+    <div class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
+      <figure class="h-[256px]">
+        <img src="./pics/custom.jpg" alt="Shoes" />
+      </figure>
+      <div class="card-body items-center">
+        <h2 class="card-title">Customize</h2>
+      </div>
     </div>
-  </div>
+    <div class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
+      <figure class="h-[256px]">
+        <img src="./pics/custom.jpg" alt="Shoes" />
+      </figure>
+      <div class="card-body items-center">
+        <h2 class="card-title">Customize</h2>
+      </div>
+    </div>
   </div>
 
   <footer class=" pl-80 footer sm:footer-horizontal bg-base-300 text-base-content p-10">
