@@ -1,4 +1,8 @@
+<?php
+session_start();
 
+$authenticated = true;
+?>
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 
@@ -51,7 +55,10 @@
 
 
       <div class="navbar-end">
-
+       <?php
+       if ($authenticated) {
+       ?>
+       
         <div class="flex-none">
           <ul class="menu menu-horizontal px-1">
             <li>
@@ -64,9 +71,14 @@
             </li>
           </ul>
         </div>
+        <?php
+       }else {
+       ?>
         <a href="login.php" class="btn btn-ghost text-lg">Login</a>
         <a href="register.php" class="btn btn-ghost text-lg">Signup</a>
-
+        <?php
+       } 
+       ?>
 
       </div>
 

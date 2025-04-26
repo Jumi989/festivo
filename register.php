@@ -1,18 +1,52 @@
 <?php
+require_once 'connect.php';
 
-session_start();
-$error =[
-  'register' =>$_SESSION['register_error'] ?? ''
-];
-$activeForm =  $_SESSION['active_form'] ?? 'login';
-session_unset();
-function showError($error) {  
-  return !empty($error) ?"<p class ='error_message'>$error</p>" : '';
+$name = "";
+$email = "";
+$password = "";
+$confirmpassword = "";
+$role = "";
+
+$name_error = "";
+$email_error = "";
+$password_error = "";
+$confirmpassword_error = "";
+$role_error = "";
+
+$error = false;
+
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $name=$_POST['name'];
+  $email=$_POST['email'];
+  $password= $_POST['password'];
+  $confirmpassword = $_POST['confirmpassword'];
+  $role=$_POST['role'];
+
+  if (empty($name)) {
+    $name_error = "Name is required";
+    $error = true;
+   
+  }
+
+  if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $email_error = "email format is not valid";
+    $error = true;
+   
+  }
+
+  if (strlen($password ) < 6) {
+    $password_error = "Password must have atleast 6 characters";
+   $error = true;
+  }
+
+  if ($confirmpassword != $password) {
+    $confirmpassword_error = "Password and Confirm password  do not match";
+    $error = true;
 }
-function isActiveForm($forName, $activeForm){
-  return   $forName === $activeForm ? 'active' : '';
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
   <head>
@@ -90,22 +124,26 @@ function isActiveForm($forName, $activeForm){
     <div class="hero min-h-screen" style="background-image: url(./pics/3.jpg)">
       <div class="hero-overlay"></div>
       <div class="hero-content text-neutral-content text-center">
-        <div class="card backdrop-blur-sm bg-purple-950/30 w-95 h-135 rounded-md">
-         <div <?= isActiveForm('register',$activeForm); ?> >
-            <form action="login_register.php" method="post" class="card-body justify-center items-center">
+        <div class="card backdrop-blur-sm bg-purple-950/30 w-95 h-145 rounded-md">
+        
+            <form action="register.php" method="post" class="card-body justify-center items-center">
                 <h3 class="text-xl ">Register</h3>
               <fieldset class="fieldset w-80">
-              <?= showError($error['register']); ?>
+              
                 <label class="fieldset-label text-base ">Name</label>
-                <input type="Name" class="input" name="name" placeholder="Name" />
+                <input type="Name" class="input" name="name" placeholder="Name" value="<?= $name ?>" />
+                <span> <?= $name_error?> </span>
                 <label class="fieldset-label text-base" >Email</label>
-                <input type="email" class="input" name="email"  placeholder="Email" />
+                <input type="email" class="input" name="email"  placeholder="Email" value="<?= $email ?>"/>
+                <span> <?= $email_error?> </span>
                 <label class="fieldset-label text-base ">Password</label>
-                <input type="password" class="input " placeholder="Password" />
+                <input type="password" class="input " name="password" placeholder="Password" value="<?= $password ?>"/>
+                <span> <?= $password_error?> </span>
                 <label class="fieldset-label text-base ">Confirm Password</label>
-                <input type="Confirm Password" class="input" name="password" placeholder="Confirm Password" />
+                <input type="Confirm Password" class="input" name="confirmpassword" placeholder="Confirm Password" value="<?= $confirmpassword ?>" />
+                <span> <?= $confirmpassword_error?> </span>
                 <label class="fieldset-label text-base ">Role</label>
-                <select name="role" class="select">
+                <select name="role" class="select" required>
                         <option disabled selected value="" >Select Role</option>
                         <option value="user">user</option>
                         <option value="admin">admin</option>
@@ -113,9 +151,11 @@ function isActiveForm($forName, $activeForm){
                 </select>
                 
                 <button class="btn btn-neutral mt-4" name="register" >Register</button>
+                <a href="./index.php" class="btn btn-ghost" name="register" >Cancel</a>
+                 
               </fieldset>
             </form>
-            </div>
+           
           </div>
             
            
