@@ -10,8 +10,9 @@ if(isset($_POST['send'])){
     $guests=$_POST['guests'];
     $arrivals=$_POST['arrivals'];
     $leaving=$_POST['leaving']; 
+    $wedding_id = $_POST['wedding_id'];
 
-    $request ="INSERT INTO book_form(name, email, phone, address, location, guests, arrivals, leaving ) VALUES('$name','$email','$phone','$address','$location','$guests','$arrivals','$leaving')";
+    $request ="INSERT INTO book_form(name, email, phone, address, location, guests, arrivals, leaving, wedding_id ) VALUES('$name','$email','$phone','$address','$location','$guests','$arrivals','$leaving','$$wedding_id')";
 
     mysqli_query($conn, $request);
 

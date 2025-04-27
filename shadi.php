@@ -92,7 +92,7 @@
                 </div>
                 <p class="text-gray-700 font-semibold">$2,999</p>
 
-                <a href="book.php"
+                <a href="book.php?wedding_id=1"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 

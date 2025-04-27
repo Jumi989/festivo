@@ -1,8 +1,13 @@
 <?php
 session_start();
 
-$authenticated = true;
+$authenticated = false;
+if (isset($_SESSION["email"])) {
+  $authenticated = true;
+}
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 
@@ -61,11 +66,13 @@ $authenticated = true;
        
         <div class="flex-none">
           <ul class="menu menu-horizontal px-1">
-            <li>
+            <li class="mr-4">
               <details>
-                <summary>Profile</summary>
+                <summary>User</summary>
                 <ul class="bg-base-100 rounded-t-none p-2">
-                  <li><a>Admin</a></li>
+                  <li><a href="./profile.php">History</a></li>
+                  <li><a href=" ./logout.php">Logout</a></li>
+
                 </ul>
               </details>
             </li>

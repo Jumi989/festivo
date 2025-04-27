@@ -1,5 +1,11 @@
 <?php
 require_once 'connect.php';
+session_start();
+
+if (isset($_SESSION["email"])) {
+ header("location: /index.php");
+ exit;
+}
 
 $name = "";
 $email = "";
@@ -35,6 +41,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
    
   }
 
+  $statement = $conn->prepare("SELECT id FROM users WHERE email = ?");
+  $statement->bind_param("s",  $email);
+  $statement->execute();
+
+  $statement ->store_result();
+  if ($statement->num_rows > 0) {
+    $email_error = "Email is already used";
+    $error = true;
+  }
+
+  $statement->close();
+
+
+
   if (strlen($password ) < 6) {
     $password_error = "Password must have atleast 6 characters";
    $error = true;
@@ -43,7 +63,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if ($confirmpassword != $password) {
     $confirmpassword_error = "Password and Confirm password  do not match";
     $error = true;
+  }
+
+if(!$error){
+  $password = password_hash($password, PASSWORD_DEFAULT);
+  $statement = $conn->prepare("INSERT INTO users (name, email, password, role) " . "VALUES (?, ?, ?, ?)");
+  $statement->bind_param("ssss", $name,$email, $password, $role);
+
+  $statement->execute();
+
+  $insert_id = $statement->insert_id;
+  $statement->close();
+
+  $_SESSION["id"] = $insert_id;
+  $_SESSION["name"] = $name;
+  $_SESSION["email"] = $email;
+  $_SESSION["password"] = $password;
+  $_SESSION["role"] = $role;
+
+  header("location: ./index.php");
+  exit;
+
 }
+
 }
 ?>
 
