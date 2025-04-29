@@ -106,9 +106,9 @@ if (isset($_SESSION["email"])) {
 
 
   <div class="overview">
-    <h3 class="text-center text-xl font-bold mt-6 mb-10">
+    <h1 class="text-center text-3xl font-serif mt-20 mb-10">
       Come and select your events with us
-    </h3>
+    </h1>
     <!-- <p class= "text-center mt-5">2</p> -->
   </div>
 
@@ -122,8 +122,7 @@ if (isset($_SESSION["email"])) {
         <h2 class="card-title">Wedding</h2>
       </div>
     </a>
-    <a href="./anniversary.php"
-      class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
+    <a href="./anniversary.php" class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
       <img src="./pics/anniversary.jpg" alt="Shoes" />
       </figure>
       <div class="card-body items-center">
@@ -150,22 +149,14 @@ if (isset($_SESSION["email"])) {
 
       </div>
     </div>
-    <div class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
+   <a href="custom.php" class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
       <figure class="h-[256px]">
         <img src="./pics/custom.jpg" alt="Shoes" />
       </figure>
       <div class="card-body items-center">
         <h2 class="card-title">Customize</h2>
       </div>
-    </div>
-    <div class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
-      <figure class="h-[256px]">
-        <img src="./pics/custom.jpg" alt="Shoes" />
-      </figure>
-      <div class="card-body items-center">
-        <h2 class="card-title">Customize</h2>
-      </div>
-    </div>
+    </a>
   </div>
 
   <footer class=" pl-80 footer sm:footer-horizontal bg-base-300 text-base-content p-10">

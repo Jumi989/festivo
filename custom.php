@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html data-theme="light" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Event Booking</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-gradient-to-r from-indigo-300 from-10% via-sky-300 via-30% to-emerald-200 to-90% text-black min-h-screen"
+  >
+    <div class="navbar border-b border-black">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+            <li><a>Item 1</a></li>
+            <li>
+              <a>Parent</a>
+              <ul class="p-2">
+                <li><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+              </ul>
+            </li>
+            <li><a>Item 3</a></li>
+          </ul>
+        </div>
+        <a class="btn btn-ghost text-xl">daisyUI</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 text-lg">
+          <li><a href="index.php">Home</a></li>
+          <li><a>Services</a></li>
+          <li><a>Contact</a></li>
+          <li><a>About</a></li>
+        </ul>
+      </div>
+
+      <div class="navbar-end">
+        <div class="flex-none">
+          <ul class="menu menu-horizontal px-1">
+            <li class="mr-4">
+              <details>
+                <summary>User</summary>
+                <ul class="bg-base-100 rounded-t-none p-2">
+                  <li><a href="./profile.php">History</a></li>
+                  <li><a href=" ./logout.php">Logout</a></li>
+                </ul>
+              </details>
+            </li>
+          </ul>
+        </div>
+
+        <a href="login.php" class="btn btn-ghost text-lg">Login</a>
+        <a href="register.php" class="btn btn-ghost text-lg">Signup</a>
+      </div>
+    </div>
+
+    <div class="flex items-start container mx-auto">
+      <!-- Sidebar -->
+      <div class="w-64 bg-white/15 shadow-lg p-5 text-black rounded-box mt-4">
+        <h2 class="text-2xl font-bold mb-8">Categories</h2>
+        <ul class="space-y-4">
+          <li>
+            <button
+              onclick="showCategory('food')"
+              class="btn btn-outline btn-block"
+            >
+              Food
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="showCategory('decoration')"
+              class="btn btn-outline btn-block"
+            >
+              Decoration
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="showCategory('stage')"
+              class="btn btn-outline btn-block"
+            >
+              Stage
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="showCategory('entertainment')"
+              class="btn btn-outline btn-block"
+            >
+              Entertainment
+            </button>
+          </li>
+          <li>
+            <button
+              onclick="showCategory('venue')"
+              class="btn btn-outline btn-block"
+            >
+              Venue
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Main Content -->
+      <div class="flex-1 p-10">
+        <h1 class="text-4xl font-bold mb-8" id="category-title">
+          Select a Category
+        </h1>
+
+        <div id="items" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Items will load here -->
+        </div>
+      </div>
+    </div>
+
+    <button
+      onclick="openCart()"
+      class="btn btn-primary fixed bottom-6 right-6 shadow-lg"
+    >
+      🛒 Selected Items (<span id="cart-count">0</span>)
+    </button>
+
+    <!-- Cart Modal -->
+    <dialog id="cartModal" class="modal text-black">
+      <div class="modal-box">
+        <h3 class="font-bold text-lg mb-4 ">Your Selected Items</h3>
+        <div class="overflow-x-auto">
+          <table class="table text-black">
+          
+            <tbody id="cart-items">
+              
+              <!-- <tr>
+                <th>1</th>
+                <td>Cy Ganderton</td>
+                <td>Quality Control Specialist</td>
+                <td>Blue</td>
+              </tr>
+               -->
+            </tbody>
+          </table>
+        </div> 
+        <p class="totalprice text-right mr-28"></p>
+        <div class="modal-action">
+         
+            <a href="./book.php" class="btn">Book</a>
+         
+        </div>
+      </div>
+    </dialog>
+
+    <script>
+      const data = {
+        food: [
+          {
+            name: "Buffet Dinner",
+            description: "Wide variety of dishes",
+            img: "./pics/buffet.jpg",
+            price: 1200,
+          },
+          {
+            name: "3-Course Meal",
+            description: "Starter, Main & Dessert",
+            img: "./pics/meal.jpg",
+            price: 1200,
+          },
+          {
+            name: "Eternal Feast",
+            description:
+              "Bruschetta Trio,Mini Crab Cakes, Herb-Crusted Chicken,Grilled Salmon,Vegetable Risotto,Wedding Cake",
+            img: "./pics/feast.jpg",
+            price: 1200,
+          },
+          {
+            name: "Corporate Evening",
+            description: "Snacks and Drinks",
+            img: "./pics/corporate.jpg",
+            price: 1200,
+          },
+          {
+            name: "Birthday Meal",
+            description: "Snacks and Cake",
+            img: "./pics/birthdaymeal.webp",
+            price: 1200,
+          },
+          {
+            name: "BBQ Party",
+            description: "Grilled Meat, Fish, Veggies & Drinks",
+            img: "./pics/bbq.webp",
+            price: 1200,
+          },
+        ],
+        decoration: [
+          {
+            name: "Classic Theme",
+            description: "Elegant white & gold setup",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "Rustic Theme",
+            description: "Wood and vintage style",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "Classic Theme",
+            description: "Elegant white & gold setup",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "Classic Theme",
+            description: "Elegant white & gold setup",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "Classic Theme",
+            description: "Elegant white & gold setup",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "Classic Theme",
+            description: "Elegant white & gold setup",
+            img: "https://via.placeholder.com/300x200",
+          },
+        ],
+        stage: [
+          {
+            name: "Floral Stage",
+            description: "Fresh flowers setup",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "LED Stage",
+            description: "Modern lighting effects",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "LED Stage",
+            description: "Modern lighting effects",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "LED Stage",
+            description: "Modern lighting effects",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "LED Stage",
+            description: "Modern lighting effects",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "LED Stage",
+            description: "Modern lighting effects",
+            img: "https://via.placeholder.com/300x200",
+          },
+        ],
+        entertainment: [
+          {
+            name: "Live Band",
+            description: "Music from professionals",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "DJ Night",
+            description: "Dance till you drop!",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "DJ Night",
+            description: "Dance till you drop!",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "DJ Night",
+            description: "Dance till you drop!",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "DJ Night",
+            description: "Dance till you drop!",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "DJ Night",
+            description: "Dance till you drop!",
+            img: "https://via.placeholder.com/300x200",
+          },
+        ],
+        venue: [
+          {
+            name: "Banquet Hall",
+            description: "Spacious event space",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "Outdoor Garden",
+            description: "Nature-themed venue",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "Outdoor Garden",
+            description: "Nature-themed venue",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "Outdoor Garden",
+            description: "Nature-themed venue",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "Outdoor Garden",
+            description: "Nature-themed venue",
+            img: "https://via.placeholder.com/300x200",
+          },
+          {
+            name: "Outdoor Garden",
+            description: "Nature-themed venue",
+            img: "https://via.placeholder.com/300x200",
+          },
+        ],
+      };
+
+      let cart = [];
+
+      function showCategory(category) {
+        const itemsDiv = document.getElementById("items");
+        const title = document.getElementById("category-title");
+        title.textContent =
+          category.charAt(0).toUpperCase() + category.slice(1);
+
+        itemsDiv.innerHTML = "";
+
+        data[category].forEach((item, index) => {
+          const card = `
+          <div class="card white/15 shadow-xl">
+            <figure><img src="${item.img}" alt="${item.name}" class="w-full h-60 object-cover"/></figure>
+            <div class="card-body">
+              <h2 class="card-title">${item.name}</h2>
+              <p>${item.description}</p>
+               <p class="font-bold text-lg">Rs ${item.price}</p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary" onclick="addToCart('${category}', ${index})">Select</button>
+              </div>
+            </div>
+          </div>
+        `;
+          itemsDiv.innerHTML += card;
+        });
+      }
+      function addToCart(category, index) {
+        const selectedItem = data[category][index];
+        cart.push(selectedItem);
+        updateCartCount();
+      }
+
+      function updateCartCount() {
+        document.getElementById("cart-count").textContent = cart.length;
+      }
+
+      function openCart() {
+        const cartList = document.getElementById("cart-items");
+        const totalprice =document.querySelector(".totalprice");
+        cartList.innerHTML = "";
+
+        let total = 0;
+
+        cart.forEach((item, index) => {
+          const tablerow = document.createElement("tr");
+          const namecell = document.createElement("td");
+          const pricecell = document.createElement("td");
+          pricecell.innerText = item.price;
+          namecell.innerText = item.name;
+          tablerow.appendChild(namecell);
+          tablerow.appendChild(pricecell);
+          
+
+          
+          total += item.price;
+          cartList.appendChild(tablerow);
+        });
+        
+        totalprice.innerText = "Total " +total;
+        
+        document.getElementById("cartModal").showModal();
+      }
+    </script>
+  </body>
+</html>
+
