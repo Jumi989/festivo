@@ -1,3 +1,17 @@
+<?php
+session_start(); // Always start session first
+
+if (!isset($_SESSION['id'])) {
+    // Not logged in, redirect to login page
+    header("Location: login.php");
+    exit;
+}
+
+// User is logged in, show private content
+// eo "Welcome, " . $_SESSION['username'] . "!";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 

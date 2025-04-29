@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (empty($email) || empty($password)) {
     $error = 'Email and Password are required';
   } else {
-    $statement = $conn->prepare("SELECT id, name, password, role FROM users WHERE email = ?");
+    $statement = $conn->prepare("SELECT id, name,email, password, role FROM users WHERE email = ?");
     $statement->bind_param("s", $email);
     $statement->execute();
 
