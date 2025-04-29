@@ -1,14 +1,5 @@
-<a?php
-session_start(); // Always start session first
-
-if (!isset($_SESSION['id'])) {
-    // Not logged in, redirect to login page
-    header("Location: login.php");
-    exit;
-}
-
-// User is logged in, show private content
-// eo "Welcome, " . $_SESSION['username'] . "!";
+<?php
+include 'navbarAd.php';
 ?>
 
 
@@ -27,54 +18,6 @@ if (!isset($_SESSION['id'])) {
 </head>
 
 <body class="bg-gradient-to-r from-amber-200 via-red-300 to-green-300">
-
-    <!-- Navbar -->
-    <header class="fixed top-0 z-50 w-full border-b ">
-
-
-        <div class="navbar">
-            <div class="navbar-start">
-                <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
-                    </div>
-                    <ul tabindex="0"
-                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <a>Parent</a>
-                            <ul class="p-2">
-                                <li><a>Submenu 1</a></li>
-                                <li><a>Submenu 2</a></li>
-                            </ul>
-                        </li>
-                        <li><a>Item 3</a></li>
-                    </ul>
-                </div>
-                <a class="btn btn-ghost text-xl">daisyUI</a>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-                <ul class="menu menu-horizontal px-1 text-lg ">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a>Services</a></li>
-                    <li><a>Contact</a></li>
-                    <li><a>About</a></li>
-
-                </ul>
-            </div>
-
-            <div class="navbar-end">
-                <a href="login.php" class="btn btn-ghost text-lg">Login</a>
-                <a href="signup.php" class="btn btn-ghost text-lg">Signup</a>
-
-
-            </div>
-        </div>
-    </header>
     <!-- Filters -->
     <div class="container mx-auto px-6 pt-20">
     <div class="flex justify-between">
@@ -91,8 +34,7 @@ if (!isset($_SESSION['id'])) {
   </div>
 </div>
 </div>
-
-    <?php
+<?php
 include 'connect.php';
 
 // Prevent caching to ensure fresh data
@@ -100,34 +42,28 @@ header("Cache-Control: no-cache, must-revalidate");
 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
 
 $result = mysqli_query($conn, "SELECT * FROM wedding");
+?>
 
-while ($record = mysqli_fetch_assoc($result)) {
-    ?>
 <div class="container mx-auto px-6 py-4">
-  <!-- This grid will display 1 column on extra small screens, 2 on small, 3 on medium, 4 on large. -->
+  <!-- Define a single grid container for all cards -->
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-    <?php
-      // Assuming you've already executed your DB query and stored the result in $result.
-      while ($record = mysqli_fetch_assoc($result)) { 
-    ?>
-    <div class="backdrop-blur- bg-white/20 shadow-md rounded-lg p-4">
-      <img src="data:image/jpeg;base64,<?php echo base64_encode($record['photo']); ?>" 
-           alt="<?php echo htmlspecialchars($record['name']); ?>" 
-           class="w-full h-40 object-cover rounded-md">
-      <h2 class="text-lg font-bold mt-2"><?php echo htmlspecialchars($record['name']); ?></h2>
-      <p class="text-gray-700 font-semibold">$<?php echo htmlspecialchars($record['price']); ?></p>
-      <a href="delete.php?wedding_id=<?php echo $record['id']; ?>" 
-         class="delete-btn bg-transparent-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost" 
-         onclick="return confirm('Are you sure you want to delete this wedding package?');">
-         <i class="fa-solid fa-trash"></i> Delete
-      </a>
-    </div>
+    <?php while ($record = mysqli_fetch_assoc($result)) { ?>
+      <div class="backdrop-blur- bg-white/20 shadow-md rounded-lg p-4">
+        <img src="data:image/jpeg;base64,<?php echo base64_encode($record['photo']); ?>" 
+             alt="<?php echo htmlspecialchars($record['name']); ?>" 
+             class="w-full h-40 object-cover rounded-md">
+        <h2 class="text-lg font-bold mt-2"><?php echo htmlspecialchars($record['name']); ?></h2>
+        <p class="text-gray-700 font-semibold">$<?php echo htmlspecialchars($record['price']); ?></p>
+        <a href="delete.php?wedding_id=<?php echo $record['id']; ?>" 
+           class="delete-btn bg-transparent-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost" 
+           onclick="return confirm('Are you sure you want to delete this wedding package?');">
+           <i class="fa-solid fa-trash"></i> Delete
+        </a>
+      </div>
     <?php } ?>
   </div>
 </div>
-    <?php
-}
-?>
+
     <footer class=" pl-80 footer sm:footer-horizontal bg-base-300 text-base-content p-10">
   <nav>
     <h6 class="footer-title">Services</h6>
