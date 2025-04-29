@@ -3,9 +3,14 @@ require_once 'connect.php';
 session_start();
 
 if (isset($_SESSION["email"])) {
-  header("location: /index.php");
+  if ($_SESSION["role"] === 'admin') {
+    header("location: /adminIndex.php");
+  } else {
+    header("location: /index.php");
+  }
   exit;
 }
+
 $email = "";
 $error = "";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -15,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (empty($email) || empty($password)) {
     $error = 'Email and Password are required';
   } else {
-    $statement = $conn->prepare("SELECT id, name,email, password, role FROM users WHERE email = ?");
+    $statement = $conn->prepare("SELECT id, name, email, password, role FROM users WHERE email = ?");
     $statement->bind_param("s", $email);
     $statement->execute();
 
@@ -30,11 +35,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION["password"] = $password;
         $_SESSION["role"] = $role;
 
+      if($role === 'admin'){
+        header("location: ./adminIndex.php");
+      } else{
         header("location: ./index.php");
-        exit;
       }
+      exit;
     }
-
+  }
     $statement->close();
 
     $error = "Email or Password invalid";
@@ -123,22 +131,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="email" class="input mb-5" name="email" placeholder="Email" value="<?= $email ?>" />
             <label class="fieldset-label text-lg mb-1">Password</label>
             <input type="password" class="input mb-5" name="password" placeholder="Password" />
-            <div><a class="link link-hover text-base">Forgot password?</a></div>
+            <div><a href="forgot-password.php" class="link link-hover text-base">Forgot password?</a></div>
             <button class="btn btn-neutral mt-4" name="login">Login</button>
           </fieldset>
         </form>
-
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
   <script src="script.js"></script>
 
 </body>

@@ -1,5 +1,4 @@
 <?php
-
 session_start(); // Always start session first
 
 if (!isset($_SESSION['id'])) {
@@ -68,9 +67,6 @@ include 'navbar.php';
                 <a href="book.php?wedding_id=1"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
-
-
-
 
             </div>
 
