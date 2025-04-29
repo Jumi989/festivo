@@ -1,41 +1,35 @@
 <?php
 
 $token = $_POST["token"];
-
 $token_hash = hash("sha256", $token);
 
 $mysqli = require __DIR__ . "/connect.php";
 
-$sql = "SELECT * FROM users
-        WHERE reset_token_hash = ?";
-
+$sql = "SELECT * FROM users WHERE reset_token_hash = ?";
 $stmt = $mysqli->prepare($sql);
-
 $stmt->bind_param("s", $token_hash);
-
 $stmt->execute();
 
 $result = $stmt->get_result();
-
 $user = $result->fetch_assoc();
 
 if ($user === null) {
-    die("token not found");
+    die("Token not found");
 }
 
 if (strtotime($user["reset_token_expires_at"]) <= time()) {
-    die("token has expired");
+    die("Token has expired");
 }
 
 if (strlen($_POST["password"]) < 6) {
     die("Password must be at least 6 characters");
 }
 
-if ( ! preg_match("/[a-z]/i", $_POST["password"])) {
+if (!preg_match("/[a-z]/i", $_POST["password"])) {
     die("Password must contain at least one letter");
 }
 
-if ( ! preg_match("/[0-9]/", $_POST["password"])) {
+if (!preg_match("/[0-9]/", $_POST["password"])) {
     die("Password must contain at least one number");
 }
 
@@ -52,9 +46,12 @@ $sql = "UPDATE users
         WHERE id = ?";
 
 $stmt = $mysqli->prepare($sql);
-
 $stmt->bind_param("ss", $password_hash, $user["id"]);
-
 $stmt->execute();
 
-echo "Password updated. You can now login.";
+// Success popup and redirect
+echo "<script>
+    alert('Your password has been updated successfully.');
+    window.location.href = 'login.php';
+</script>";
+?>
