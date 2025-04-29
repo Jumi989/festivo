@@ -1,4 +1,4 @@
-<?php
+<a?php
 session_start(); // Always start session first
 
 if (!isset($_SESSION['id'])) {
@@ -27,7 +27,6 @@ if (!isset($_SESSION['id'])) {
 </head>
 
 <body class="bg-gradient-to-r from-amber-200 via-red-300 to-green-300">
-
 
     <!-- Navbar -->
     <header class="fixed top-0 z-50 w-full border-b ">
@@ -78,16 +77,21 @@ if (!isset($_SESSION['id'])) {
     </header>
     <!-- Filters -->
     <div class="container mx-auto px-6 pt-20">
-        <div class="flex justify-between">
-            <input type="text" placeholder="Search packages..." class="p-2 w-1/3 border rounded-md">
-            <button class="p-2 border rounded-md px-4 ml-auto">ADD</button>
-            <select class="p-2 border rounded-md">
-                <option>Sort by Price</option>
-                <option>Low to High</option>
-                <option>High to Low</option>
-            </select>
-        </div>
-    </div>
+    <div class="flex justify-between">
+  <input type="text" placeholder="Search packages..." class="p-2 w-1/3 border rounded-md" />
+  
+  <div class="flex space-x-4">
+  <div class="p-2 px-4">  
+  <a href="addForm.php" class="p-2 border rounded-md px-4">ADD</a></div>
+    <select class="p-2 border rounded-md">
+      <option>Sort by Price</option>
+      <option>Low to High</option>
+      <option>High to Low</option>
+    </select>
+  </div>
+</div>
+</div>
+
     <?php
 include 'connect.php';
 
@@ -202,7 +206,5 @@ while ($record = mysqli_fetch_assoc($result)) {
 });
 
 </script>
-
 </body>
-
 </html>
