@@ -182,29 +182,5 @@ while ($record = mysqli_fetch_assoc($result)) {
     </div>
   </nav>
 </footer>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".delete-btn").forEach(button => {
-        button.addEventListener("click", function (event) {
-            event.preventDefault();
-            const packageId = this.getAttribute("data-id");
-
-            if (confirm("Are you sure you want to delete this wedding package?")) {
-                fetch(`delete.php?wedding_id=${packageId}`, {
-                    method: "GET"
-                }).then(response => response.text())
-                  .then(data => {
-                      if (data.includes("No ID specified.")) {
-                          alert("Deletion failed.");
-                      } else {
-                          this.closest(".backdrop-blur-").remove(); // Remove from frontend
-                      }
-                  });
-            }
-        });
-    });
-});
-
-</script>
 </body>
 </html>
