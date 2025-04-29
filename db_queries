@@ -1,5 +1,0 @@
-mysql -u root -p
-
-create database planner;
-
-create table users;

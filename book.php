@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
   <head>
@@ -13,69 +16,13 @@
   </head>
    <body>
     <!-- Navbar -->
-     <header class="fixed top-0 z-50 w-full border-b">
-    
-    
-    <div class="navbar text-white">
-      <div class="navbar-start">
-        <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
-          </div>
-          <ul
-            tabindex="0"
-            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
-          >
-            <li><a>Item 1</a></li>
-            <li>
-              <a>Parent</a>
-              <ul class="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
-              </ul>
-            </li>
-            <li><a>Item 3</a></li>
-          </ul>
-        </div>
-        <a class="btn btn-ghost text-xl">daisyUI</a>
-      </div>
-      <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1 text-lg">
-          <li><a href="index.php">Home</a></li>
-          <li><a>Services</a></li>
-          <li><a>Contact</a></li>
-          <li><a>About</a></li>
-
-        </ul>
-      </div>
-      
-      <div class="navbar-end">
-        <a href="login.php" class="btn btn-ghost text-lg">Login</a>
-        <a href="register.php" class="btn btn-ghost text-lg">Signup</a>
-
-        
-      </div>
-    </div>
-    </header>
+   
     <div class="hero min-h-screen" style="background-image: url(./pics/form.jpg)">
       <div class="hero-overlay"></div>
       <div class="hero-content text-neutral-content text-center">
         <div class="card backdrop-blur- bg-white/15 w-[900px] h-122 rounded-md">
         
-            <form action="book_form.php" method="post" class="card-body justify-center items-center ">
+            <form action="book_form.php?wedding_id=<?=$_GET["wedding_id"]?>" method="post" class="card-body justify-center items-center ">
                 <h2 class="text-2xl ">Book Your Events!</h2>
               <fieldset class="fieldset w-[800px] gap-6 grid grid-cols-2">
                 <div>
@@ -96,9 +43,9 @@
                   <label class="fieldset-label text-base ">How Many:</label>
                   <input type="text" class="input w-full " name="guests" placeholder="number of guests" />
                   <label class="fieldset-label text-base ">Arrivals</label>
-                   <input type="date" class="input w-full" name="arrivals" placeholder="Arrivals" />
+                   <input type="time" class="input w-full" name="arrivals" placeholder="Arrivals" />
                   <label class="fieldset-label text-base ">Leaving</label>
-                   <input type="date" class="input w-full" name="leaving" placeholder="Leaving" />
+                   <input type="time" class="input w-full" name="leaving" placeholder="Leaving" />
                  </div>
                 
                 
