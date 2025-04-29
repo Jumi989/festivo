@@ -110,9 +110,6 @@ if (!isset($_SESSION['id'])) {
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
-
-
-
             </div>
 
             <div class=" backdrop-blur- bg-white/20 shadow-md rounded-lg p-4">

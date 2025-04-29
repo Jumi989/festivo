@@ -3,9 +3,14 @@ require_once 'connect.php';
 session_start();
 
 if (isset($_SESSION["email"])) {
-  header("location: /index.php");
+  if ($_SESSION["role"] === 'admin') {
+    header("location: /adminIndex.php");
+  } else {
+    header("location: /index.php");
+  }
   exit;
 }
+
 $email = "";
 $error = "";
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -30,11 +35,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION["password"] = $password;
         $_SESSION["role"] = $role;
 
+      if($role === 'admin'){
+        header("location: ./adminIndex.php");
+      } else{
         header("location: ./index.php");
-        exit;
       }
+      exit;
     }
-
+  }
     $statement->close();
 
     $error = "Email or Password invalid";

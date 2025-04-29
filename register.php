@@ -81,11 +81,13 @@ if(!$error){
   $_SESSION["password"] = $password;
   $_SESSION["role"] = $role;
 
-  header("location: ./index.php");
+  if($role === 'admin'){
+    header("location: ./adminIndex.php");
+  } else{
+    header("location: ./index.php");
+  }
   exit;
-
 }
-
 }
 ?>
 
