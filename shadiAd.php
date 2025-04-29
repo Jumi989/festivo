@@ -80,6 +80,7 @@ if (!isset($_SESSION['id'])) {
     <div class="container mx-auto px-6 pt-20">
         <div class="flex justify-between">
             <input type="text" placeholder="Search packages..." class="p-2 w-1/3 border rounded-md">
+            <button class="p-2 border rounded-md px-4 ml-auto">ADD</button>
             <select class="p-2 border rounded-md">
                 <option>Sort by Price</option>
                 <option>Low to High</option>
