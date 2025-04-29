@@ -22,7 +22,7 @@ include 'navbar.php';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Packages</title>
+    <title>Birthday Packages</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -53,8 +53,8 @@ include 'navbar.php';
 
             <!-- Package Card -->
             <div class=" backdrop-blur- bg-white/20 shadow-md rounded-lg p-4">
-                <img src="./pics/pack2.jpeg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
-                <h2 class="text-lg font-bold mt-2">Elegant Wedding</h2>
+                <img src="./pics/themed.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                <h2 class="text-lg font-bold mt-2">Themed Birthday Party</h2>
                 <div class="rating rating-xs">
                     <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
                     <input type="radio" name="rating-1" class="mask mask-star-2 bg-orange-400" aria-label="2 star"
@@ -75,8 +75,8 @@ include 'navbar.php';
             </div>
 
             <div class=" backdrop-blur- bg-white/20 shadow-md rounded-lg p-4">
-                <img src="./pics/destination.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
-                <h2 class="text-lg font-bold mt-2">Destination Wedding</h2>
+                <img src="./pics/home.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                <h2 class="text-lg font-bold mt-2">Cozy Home Celebration</h2>
                 <div class="rating rating-xs">
                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
                     <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" aria-label="2 star"
@@ -87,7 +87,7 @@ include 'navbar.php';
                 </div>
                 <p class="text-gray-700 font-semibold">$2,000</p>
 
-                <a href="book.php?wedding_id=2"
+                <a href="book.php"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -95,8 +95,8 @@ include 'navbar.php';
             </div>
 
             <div class=" backdrop-blur- bg-white/20 shadow-md rounded-lg p-4">
-                <img src="./pics/home wed.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
-                <h2 class="text-lg font-bold mt-2">Home Wedding</h2>
+                <img src="./pics/mexi.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                <h2 class="text-lg font-bold mt-2">Mexican Quinceanera</h2>
                 <div class="rating rating-xs">
                     <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
                     <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" aria-label="2 star"
@@ -106,7 +106,7 @@ include 'navbar.php';
                     <input type="radio" name="rating-3" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
                 </div>
                 <p class="text-gray-700 font-semibold">$2,000</p>
-                <a href="book.php?wedding_id=3"
+                <a href="book.php"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -114,8 +114,8 @@ include 'navbar.php';
             </div>
 
             <div class=" backdrop-blur- bg-white/20 shadow-md rounded-lg p-4">
-                <img src="./pics/simple.jpeg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
-                <h2 class="text-lg font-bold mt-2">Simple Wedding</h2>
+                <img src="./pics/grand.webp" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                <h2 class="text-lg font-bold mt-2">Grand Celebration</h2>
                 <div class="rating rating-xs">
                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" aria-label="2 star"
@@ -125,7 +125,7 @@ include 'navbar.php';
                     <input type="radio" name="rating-4" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
                 </div>
                 <p class="text-gray-700 font-semibold">$2,000</p>
-                <a href="book.php?wedding_id=4"
+                <a href="book.php"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -133,8 +133,8 @@ include 'navbar.php';
             </div>
 
             <div class=" backdrop-blur- bg-white/20 shadow-md rounded-lg p-4">
-                <img src="./pics/pack3.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
-                <h2 class="text-lg font-bold mt-2">Holud Ceremony</h2>
+                <img src="./pics/budget.jpeg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                <h2 class="text-lg font-bold mt-2">In a budget</h2>
                 <div class="rating rating-xs">
                     <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
                     <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="2 star"
@@ -144,7 +144,7 @@ include 'navbar.php';
                     <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
                 </div>
                 <p class="text-gray-700 font-semibold">$2,000</p>
-                <a href="book.php?wedding_id=5"
+                <a href="book.php"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -152,8 +152,8 @@ include 'navbar.php';
             </div>
 
             <div class=" backdrop-blur- bg-white/20 shadow-md rounded-lg p-4">
-                <img src="./pics/sangeet.jpeg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
-                <h2 class="text-lg font-bold mt-2">Sangeet</h2>
+                <img src="./pics/destination2.jpg" alt="Wedding Package" class="w-full h-40 object-cover rounded-md">
+                <h2 class="text-lg font-bold mt-2">Destination Celebration</h2>
                 <div class="rating rating-xs">
                     <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
                     <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" aria-label="2 star"
@@ -163,7 +163,7 @@ include 'navbar.php';
                     <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
                 </div>
                 <p class="text-gray-700 font-semibold">$2,000</p>
-                <a href="book.php?wedding_id=6"
+                <a href="book.php"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -182,7 +182,7 @@ include 'navbar.php';
                     <input type="radio" name="rating-7" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
                 </div>
                 <p class="text-gray-700 font-semibold">$2,000</p>
-                <a href="book.php?wedding_id=7"
+                <a href="book.php"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -201,7 +201,7 @@ include 'navbar.php';
                     <input type="radio" name="rating-8" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
                 </div>
                 <p class="text-gray-700 font-semibold">$2,000</p>
-                <a href="book.php?wedding_id=8"
+                <a href="book.php"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -219,7 +219,7 @@ include 'navbar.php';
                     <input type="radio" name="rating-9" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
                 </div>
                 <p class="text-gray-700 font-semibold">$2,000</p>
-                <a href="book.php?wedding_id=9"
+                <a href="book.php"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -238,7 +238,7 @@ include 'navbar.php';
                     <input type="radio" name="rating-10" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
                 </div>
                 <p class="text-gray-700 font-semibold">$2,000</p>
-                <a href="book.php?wedding_id=10"
+                <a href="book.php"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -257,7 +257,7 @@ include 'navbar.php';
                     <input type="radio" name="rating-11" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
                 </div>
                 <p class="text-gray-700 font-semibold">$2,000</p>
-                <a href="book.php?wedding_id=11"
+                <a href="book.php"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -276,7 +276,7 @@ include 'navbar.php';
                     <input type="radio" name="rating-12" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
                 </div>
                 <p class="text-gray-700 font-semibold">$2,000</p>
-                <a href="book.php?wedding_id=12"
+                <a href="book.php"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -294,7 +294,6 @@ include 'navbar.php';
     <?php
     include 'footer.php';
     ?>
-
 
 </body>
 
