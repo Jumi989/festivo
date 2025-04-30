@@ -1,11 +1,5 @@
 <?php
-session_start();
-
-$authenticated = false;
-if (isset($_SESSION["email"])) {
-  $authenticated = true;
-}
-
+include 'navbar.php';
 ?>
 
 <!DOCTYPE html>
@@ -20,9 +14,6 @@ if (isset($_SESSION["email"])) {
 </head>
 
 <body>
-  <!-- Navbar -->
-  
-  <!-- Hero Section -->
   <div class="hero min-h-screen" style="background-image: url(./pics/3.jpg)">
     <div class="hero-overlay"></div>
     <div class="hero-content text-neutral-content text-center">

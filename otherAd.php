@@ -1,31 +1,25 @@
 <?php
 include 'navbarAd.php';
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Packages</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Other Events</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet" />
 </head>
 
-<body class="bg-gradient-to-r from-amber-200 via-red-300 to-green-300">
-    <!-- Filters -->
-    <div class="container mx-auto px-6 pt-20">
+<body class="min-h-screen bg-gradient-to-br from-blue-300 via-purple-400 to-pink-200">
+<div class="container mx-auto px-6 pt-20">
     <div class="flex justify-between">
   <input type="text" placeholder="Search packages..." class="p-2 w-1/3 border rounded-md" />
   
   <div class="flex space-x-4">
   <div class="p-2 px-4">  
-  <a href="addForm.php" class="p-2 border rounded-md px-4">ADD</a></div>
+  <a href="addFormO.php" class="p-2 border rounded-md px-4">ADD</a></div>
     <select class="p-2 border rounded-md">
       <option>Sort by Price</option>
       <option>Low to High</option>
@@ -41,7 +35,7 @@ include 'connect.php';
 header("Cache-Control: no-cache, must-revalidate");
 header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
 
-$result = mysqli_query($conn, "SELECT * FROM wedding");
+$result = mysqli_query($conn, "SELECT * FROM other");
 ?>
 
 <div class="container mx-auto px-6 py-4">
@@ -53,8 +47,8 @@ $result = mysqli_query($conn, "SELECT * FROM wedding");
              alt="<?php echo htmlspecialchars($record['name']); ?>" 
              class="w-full h-40 object-cover rounded-md">
         <h2 class="text-lg font-bold mt-2"><?php echo htmlspecialchars($record['name']); ?></h2>
-        <p class="text-gray-700 font-semibold">$<?php echo htmlspecialchars($record['price']); ?></p>
-        <a href="delete.php?wedding_id=<?php echo $record['id']; ?>" 
+        <p class="text-gray-700 font-semibold"><?php echo htmlspecialchars($record['description']); ?></p>
+        <a href="deleteO.php?other_id=<?php echo $record['o_id']; ?>" 
            class="delete-btn bg-transparent-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost" 
            onclick="return confirm('Are you sure you want to delete this wedding package?');">
            <i class="fa-solid fa-trash"></i> Delete
@@ -64,8 +58,11 @@ $result = mysqli_query($conn, "SELECT * FROM wedding");
   </div>
 </div>
 
-<?php
+
+  <?php
   include 'footer.php';
   ?>
+
 </body>
+
 </html>

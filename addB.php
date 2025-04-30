@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['Add'])) {
     // Prepare a statement to insert the new package.
     // Since photo data is binary and expected to be relatively small,
     // we bind it as a string. (For very large blobs, consider using "b" and mysqli_stmt_send_long_data.)
-    $stmt = mysqli_prepare($conn, "INSERT INTO wedding (name, price, photo) VALUES (?, ?, ?)");
+    $stmt = mysqli_prepare($conn, "INSERT INTO birthday (name, price, photo) VALUES (?, ?, ?)");
     if (!$stmt) {
         die("Preparation failed: " . mysqli_error($conn));
     }
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['Add'])) {
     if (mysqli_stmt_execute($stmt)) {
         echo "Package added successfully!";
         // Optionally, you can redirect to another page after insertion:
-        header("Location: shadiAd.php");
+        header("Location: birthAd.php");
         exit();
     } else {
         echo "Error adding package: " . mysqli_stmt_error($stmt);
