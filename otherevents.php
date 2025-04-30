@@ -41,26 +41,15 @@ include 'navbar.php';
           <h2 class="card-title">Corporate Events</h2>
           <p>Professional setup for meetings, seminars, and conferences.</p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">View Details</button>
+            <a href="book.php">
+
+              <button class="btn btn-primary">Book</button>
+            </a>
           </div>
         </div>
 
 
-        <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
-        <dialog id="corporate-modal" class="modal">
-          <div class="modal-box">
-            <h3 class="text-lg font-bold">Corporate Events</h3>
-            <p class="py-4">
-              We organize seamless corporate events including conferences, product launches, and business meetings.
-              Full venue setup, catering, audio-visuals, and event staffing are included.</p>
-            <div class="modal-action">
-              <form method="dialog">
-                <!-- if there is a button in form, it will close the modal -->
-                <button class="btn">Close</button>
-              </form>
-            </div>
-          </div>
-        </dialog>
+
       </div>
 
 
@@ -72,7 +61,10 @@ include 'navbar.php';
           <h2 class="card-title">Funeral Services</h2>
           <p>Respectful arrangements to honor your loved ones.</p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">View Details</button>
+            <a href="book.php">
+
+              <button class="btn btn-primary">Book</button>
+            </a>
           </div>
         </div>
       </div>
@@ -84,7 +76,10 @@ include 'navbar.php';
           <h2 class="card-title">House Parties</h2>
           <p>Private gatherings with customized setups and entertainment.</p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">View Details</button>
+            <a href="book.php">
+
+              <button class="btn btn-primary">Book</button>
+            </a>
           </div>
         </div>
       </div>
@@ -96,7 +91,10 @@ include 'navbar.php';
           <h2 class="card-title">Retirement Parties</h2>
           <p>Honor a lifetime of achievements with style and grace.</p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">View Details</button>
+          <a href="book.php">
+
+<button class="btn btn-primary">Book</button>
+</a>
           </div>
         </div>
       </div>
@@ -107,7 +105,10 @@ include 'navbar.php';
           <h2 class="card-title">Award Ceremonies</h2>
           <p>Recognize and celebrate success with a grand event.</p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">View Details</button>
+          <a href="book.php">
+
+<button class="btn btn-primary">Book</button>
+</a>
           </div>
         </div>
       </div>
@@ -118,7 +119,10 @@ include 'navbar.php';
           <h2 class="card-title">Festivals</h2>
           <p>Colorful setups for cultural, music, and food festivals.</p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">View Details</button>
+          <a href="book.php">
+
+<button class="btn btn-primary">Book</button>
+</a>
           </div>
         </div>
       </div>
@@ -129,7 +133,10 @@ include 'navbar.php';
           <h2 class="card-title">Baby Showers</h2>
           <p>Celebrate the upcoming arrival of your little one in style.</p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">View Details</button>
+          <a href="book.php">
+
+<button class="btn btn-primary">Book</button>
+</a>
           </div>
         </div>
       </div>

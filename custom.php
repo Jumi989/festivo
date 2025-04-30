@@ -149,128 +149,154 @@ include 'navbar.php';
         {
           name: "Classic Theme",
           description: "Elegant white & gold setup",
-          img: "https://via.placeholder.com/300x200",
+          img: "./pics/classic.webp",
+          price: 1200,
         },
         {
           name: "Rustic Theme",
           description: "Wood and vintage style",
-          img: "https://via.placeholder.com/300x200",
+          img: "./pics/rustic.jpg",
+          price: 1200,
         },
         {
-          name: "Classic Theme",
-          description: "Elegant white & gold setup",
-          img: "https://via.placeholder.com/300x200",
+          name: "Floral Fantasy",
+          description: "Flower Bliss",
+          img: "./pics/floral.jpg",
+          price: 1200,
         },
         {
-          name: "Classic Theme",
-          description: "Elegant white & gold setup",
-          img: "https://via.placeholder.com/300x200",
+          name: "Rainbow Party",
+          description: "Unicorns and bubbles",
+          img: "./pics/rainbow.jpg",
+          price: 1200,
         },
         {
-          name: "Classic Theme",
-          description: "Elegant white & gold setup",
-          img: "https://via.placeholder.com/300x200",
+          name: "Prefessional Event",
+          description: "Sound and Lights",
+          img: "./pics/office.jpg",
+          price: 1200,
         },
         {
-          name: "Classic Theme",
-          description: "Elegant white & gold setup",
-          img: "https://via.placeholder.com/300x200",
+          name: "Minimalistic Themed Party",
+          description: "Cozy space setup ",
+          img: "./pics/min.jpg",
+          price: 1200,
         },
       ],
       stage: [
         {
           name: "Floral Stage",
           description: "Fresh flowers setup",
-          img: "https://via.placeholder.com/300x200",
+          img: "./pics/stage.jpg",
+          price: 200,
         },
         {
           name: "LED Stage",
           description: "Modern lighting effects",
-          img: "https://via.placeholder.com/300x200",
+          img: "./pics/led.jpg",
+          price: 300,
         },
         {
-          name: "LED Stage",
-          description: "Modern lighting effects",
-          img: "https://via.placeholder.com/300x200",
+          name: "Fashion Show Stage",
+          description: "Dramatic Lighting",
+          img: "./pics/show.png",
+          price: 400,
         },
         {
-          name: "LED Stage",
-          description: "Modern lighting effects",
-          img: "https://via.placeholder.com/300x200",
+          name: "Reception Stage",
+          description: "For receptions, social functions, after-parties",
+          img: "./pics/recep.jpg",
+          price: 1000,
         },
         {
-          name: "LED Stage",
-          description: "Modern lighting effects",
-          img: "https://via.placeholder.com/300x200",
+          name: "Themed Stage",
+          description: "Decorated stage for birthdays",
+          img: "./pics/bd.jpg",
+          price: 600,
         },
         {
-          name: "LED Stage",
-          description: "Modern lighting effects",
-          img: "https://via.placeholder.com/300x200",
+          name: "Open Mic Stage",
+          description: "Small casual performances",
+          img: "./pics/mic.jpg",
+          price: 800,
         },
       ],
       entertainment: [
         {
           name: "Live Band",
           description: "Music from professionals",
-          img: "https://via.placeholder.com/300x200",
+          img: "./pics/band.jpg",
+          price: 400,
+
         },
         {
           name: "DJ Night",
           description: "Dance till you drop!",
-          img: "https://via.placeholder.com/300x200",
+          img: "./pics/dj.jpeg",
+          price: 300,
         },
         {
-          name: "DJ Night",
+          name: "Dance Performance",
           description: "Dance till you drop!",
-          img: "https://via.placeholder.com/300x200",
+          img: "./pics/dance.jpeg",
+          price: 200,
         },
         {
-          name: "DJ Night",
-          description: "Dance till you drop!",
-          img: "https://via.placeholder.com/300x200",
+          name: "Magic Show",
+          description: "Magicians for kids' parties and adult events",
+          img: "./pics/magic.jpeg",
+          price: 200,
         },
         {
-          name: "DJ Night",
+          name: "Fireworks Show",
           description: "Dance till you drop!",
-          img: "https://via.placeholder.com/300x200",
+          img: "./pics/firewoks.jpg",
+          price: 700,
         },
         {
-          name: "DJ Night",
+          name: "Puppet Show",
           description: "Dance till you drop!",
-          img: "https://via.placeholder.com/300x200",
+          img: "./pics/p.png",
+          price: 100,
         },
       ],
       venue: [
         {
           name: "Banquet Hall",
           description: "Spacious event space",
-          img: "https://via.placeholder.com/300x200",
+          img: "./pics/hall.jpg",
+          price: 1000,
         },
         {
           name: "Outdoor Garden",
           description: "Nature-themed venue",
-          img: "https://via.placeholder.com/300x200",
+          img: "./pics/garden.jpg",
+          price: 1200,
         },
         {
-          name: "Outdoor Garden",
+          name: "Rooftop Venue",
           description: "Nature-themed venue",
-          img: "https://via.placeholder.com/300x200",
+          img: "./pics/roof.jpg",
+          price: 800,
         },
         {
-          name: "Outdoor Garden",
+          name: "Boat Venue",
           description: "Nature-themed venue",
-          img: "https://via.placeholder.com/300x200",
+          img: "./pics/yacht.jpg",
+          price: 2000,
         },
         {
-          name: "Outdoor Garden",
+          name: "Community Centre",
           description: "Nature-themed venue",
-          img: "https://via.placeholder.com/300x200",
+          img: "./pics/center.jpg",
+          price: 700,
         },
-        {
-          name: "Outdoor Garden",
+          {
+
+          name: "Vineyard Venue",
           description: "Nature-themed venue",
-          img: "https://via.placeholder.com/300x200",
+          img: "./pics/vineyard.avif",
+          price: 1500,
         },
       ],
     };
@@ -292,7 +318,7 @@ include 'navbar.php';
             <div class="card-body">
               <h2 class="card-title">${item.name}</h2>
               <p>${item.description}</p>
-               <p class="font-bold text-lg">Rs ${item.price}</p>
+               <p class="font-bold text-lg">$ ${item.price}</p>
               <div class="card-actions justify-end">
                 <button class="btn btn-primary" onclick="addToCart('${category}', ${index})">Select</button>
               </div>
@@ -338,9 +364,9 @@ include 'navbar.php';
 
       document.getElementById("cartModal").showModal();
     }
-    
+
   </script>
-  
+
   <?php
   include 'footer.php';
   ?>

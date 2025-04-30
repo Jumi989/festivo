@@ -47,8 +47,8 @@ include 'navbar.php';
     <h2 class="text-4xl font-bold text-center mb-12 text-indigo-800">Meet Our Team</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-10">
       
-      <div class="card bg-base-100 shadow-xl">
-        <figure><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team Member" class="h-60 w-full object-cover"/></figure>
+      <div class="card bg-base-100 shadow-xl object-fit">
+        <figure><img src="./pics/ritee.jpg" alt="Team Member" class="h-60 w-full object-cover"/></figure>
         <div class="card-body items-center text-center">
           <h2 class="card-title">Tasneem Ahmed</h2>
           <p>Lead Event Designer</p>
@@ -56,7 +56,7 @@ include 'navbar.php';
       </div>
 
       <div class="card bg-base-100 shadow-xl">
-        <figure><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member" class="h-60 w-full object-cover"/></figure>
+        <figure><img src="./pics/jumana.jpeg" alt="Team Member" class="h-60 w-full object-cover"/></figure>
         <div class="card-body items-center text-center">
           <h2 class="card-title">Jumana Muntaha</h2>
           <p>Operations Manager</p>
@@ -64,7 +64,7 @@ include 'navbar.php';
       </div>
 
       <div class="card bg-base-100 shadow-xl">
-        <figure><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Team Member" class="h-60 w-full object-cover"/></figure>
+        <figure><img src="./pics/abida.jpg" alt="Team Member" class="h-60 w-full object-cover"/></figure>
         <div class="card-body items-center text-center">
           <h2 class="card-title">Abida Binte Asif</h2>
           <p>Client Relations</p>

@@ -5,7 +5,7 @@ $authenticated = false;
 if (isset($_SESSION["email"])) {
   $authenticated = true;
 }
-
+include 'navbar.php';
 ?>
 
 <!DOCTYPE html>

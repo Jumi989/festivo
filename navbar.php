@@ -11,7 +11,7 @@ if (isset($_SESSION["email"])) {
 <header class="fixed top-0 z-50 w-full border-b">
 
 
-    <div class="navbar text-white">
+    <div class="navbar text-black">
       <div class="navbar-start">
         <div class="dropdown">
           <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -21,15 +21,18 @@ if (isset($_SESSION["email"])) {
             </svg>
           </div>
           <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-            <li><a>Item 1</a></li>
+            
             <li>
-              <a>Parent</a>
+              <a href="index.php">Home</a>
               <ul class="p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
+                <li><a href="shadi.php">Wedding</a></li>
+                <li><a href="anniversary.php">Anniversary</a></li>
+                <li><a href="birthday.php">Birthday</a></li>
+                <li><a href="otherevents.php">Other</a></li>
+                <li><a href="custom.php">Customize</a></li>
               </ul>
             </li>
-            <li><a>Item 3</a></li>
+            <li><a href="aboutus.php">About us</a></li>
           </ul>
         </div>
         <a class="btn btn-ghost text-xl">daisyUI</a>

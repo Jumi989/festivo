@@ -14,8 +14,9 @@ if(isset($_POST['send'])){
     $arrivals=$_POST['arrivals'];
     $leaving=$_POST['leaving']; 
     $wedding_id = intval($_GET['wedding_id']);
+    $anniversary_id = intval($_GET['anniversary_id']);
 
-    $request ="INSERT INTO book_form(name, email, phone, address, location, guests, arrivals, leaving, wedding_id ) VALUES('$name','$email','$phone','$address','$location','$guests','$arrivals','$leaving','$wedding_id')";
+    $request ="INSERT INTO book_form(name, email, phone, address, location, guests, arrivals, leaving, wedding_id, anniversary_id) VALUES('$name','$email','$phone','$address','$location','$guests','$arrivals','$leaving','$wedding_id','$anniversary_id')";
 
     mysqli_query($conn, $request);
 

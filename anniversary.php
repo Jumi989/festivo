@@ -63,7 +63,7 @@ include 'navbar.php';
                 </div>
                 <p class="text-gray-700 font-semibold">$2,999</p>
 
-                <a href="book.php"
+                <a href="book.php?anniversary=1"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -86,7 +86,7 @@ include 'navbar.php';
                 </div>
                 <p class="text-gray-700 font-semibold">$2,999</p>
 
-                <a href="book.php"
+                <a href="book.php?anniversary=2"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -107,7 +107,7 @@ include 'navbar.php';
                 </div>
                 <p class="text-gray-700 font-semibold">$2,999</p>
 
-                <a href="book.php"
+                <a href="book.php?anniversary=3"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -130,7 +130,7 @@ include 'navbar.php';
                 </div>
                 <p class="text-gray-700 font-semibold">$2,999</p>
 
-                <a href="book.php"
+                <a href="book.php?anniversary=4"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -153,7 +153,7 @@ include 'navbar.php';
                 </div>
                 <p class="text-gray-700 font-semibold">$2,999</p>
 
-                <a href="book.php"
+                <a href="book.php?anniversary=5"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -176,7 +176,7 @@ include 'navbar.php';
                 </div>
                 <p class="text-gray-700 font-semibold">$2,999</p>
 
-                <a href="book.php"
+                <a href="book.php?anniversary=6"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -199,7 +199,7 @@ include 'navbar.php';
                 </div>
                 <p class="text-gray-700 font-semibold">$2,999</p>
 
-                <a href="book.php"
+                <a href="book.php?anniversary=7"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 
@@ -222,7 +222,7 @@ include 'navbar.php';
                 </div>
                 <p class="text-gray-700 font-semibold">$2,999</p>
 
-                <a href="book.php"
+               <a href="book.php?anniversary=8"
                     class="bg-tranperant-600 text-black w-full py-2 mt-4 rounded-md hover:scale-[1.1] duration-400 ease-out transition btn btn-ghost w-full"
                     name="add"> <i class="fa-solid fa-cart-shopping"></i>Book Now</a>
 

@@ -7,8 +7,7 @@ if (!isset($_SESSION['id'])) {
     exit;
 }
 
-// User is logged in, show private content
-// eo "Welcome, " . $_SESSION['username'] . "!";
+
 
 include 'navbar.php';
 
