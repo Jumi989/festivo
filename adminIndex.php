@@ -62,15 +62,16 @@ include 'navbarAd.php';
       </div>
     </div>
     </a>
+    <a href="./otherAd.php" class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
     <div class="card bg-base-100  w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
       <figure>
         <img src="./pics/other.jpg" alt="Shoes" />
       </figure>
       <div class="card-body items-center">
         <h2 class="card-title">Other Events</h2>
-
       </div>
     </div>
+    </a>
    <a href="custom.php" class="card bg-base-100 w-96 shadow-sm hover:scale-[1.1] duration-400 ease-out transition">
       <figure class="h-[256px]">
         <img src="./pics/custom.jpg" alt="Shoes" />

@@ -1,3 +1,4 @@
+<?include 'navbarAd.php';?>
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
   <head>
@@ -76,7 +77,7 @@
         <div class="card backdrop-blur- bg-white/15 w-[900px] h-122 rounded-md">
         
         <form action="add.php" method="post" enctype="multipart/form-data" class="card-body flex flex-col items-center">
-  <h2 class="text-2xl mb-4 text-center">Add a Package</h2>
+  <h2 class="text-2xl mb-4 text-center">Add a Wedding Package</h2>
 
   <fieldset class="space-y-4 w-72">
     <div class="flex flex-col">
