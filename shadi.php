@@ -1,18 +1,6 @@
 <?php
-session_start(); // Always start session first
-
-if (!isset($_SESSION['id'])) {
-    // Not logged in, redirect to login page
-    header("Location: login.php");
-    exit;
-}
-
-
-
 include 'navbar.php';
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">

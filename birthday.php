@@ -1,18 +1,5 @@
 <?php
-
-session_start(); // Always start session first
-
-if (!isset($_SESSION['id'])) {
-    // Not logged in, redirect to login page
-    header("Location: login.php");
-    exit;
-}
-
-// User is logged in, show private content
-// eo "Welcome, " . $_SESSION['username'] . "!";
-
 include 'navbar.php';
-
 ?>
 
 
@@ -31,11 +18,6 @@ include 'navbar.php';
 </head>
 
 <body class="bg-gradient-to-r from-amber-200 via-red-300 to-green-300">
-
-
-    <!-- Navbar -->
-
-    <!-- Filters -->
     <div class="container mx-auto px-6 pt-20">
         <div class="flex justify-between">
             <input type="text" placeholder="Search packages..." class="p-2 w-1/3 border rounded-md">
